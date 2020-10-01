@@ -1,12 +1,13 @@
-# Welcome to your CDK TypeScript Construct Library project!
+# 10314
 
-You should explore the contents of this project. It demonstrates a CDK Construct Library that includes a construct (`CdkLibIssue10314`)
-which contains an Amazon SQS queue that is subscribed to an Amazon SNS topic.
+To reproduce, clone this repo, then:
 
-The construct defines an interface (`CdkLibIssue10314Props`) to configure the visibility timeout of the queue.
+* `npm install` in root of repository, then `tsc` to typescript compile.
+* `cd example-app` and `npm install && tsc && cdk diff`
 
-## Useful commands
+You should see the error:
 
- * `npm run build`   compile typescript to js
- * `npm run watch`   watch for changes and compile
- * `npm run test`    perform the jest unit tests
+```
+unable to determine cloud assembly output directory. Assets must be defined indirectly within a "Stage" or an "App" scope
+Subprocess exited with error 1
+```
